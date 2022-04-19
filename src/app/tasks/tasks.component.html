@@ -1,1 +1,15 @@
-<p>tasks works!</p>
+<h2>Tarea {{Task.id}}</h2>
+<div><span>status: </span>{{Task.status | uppercase}}</div>
+
+<h2>My Tasks</h2>
+<ul class="tasks">
+    <li *ngFor="let Task of task">
+        <button type="button" (click)="onSelect(Task)"></button>
+        <span class="badge">Task: {{Task.id}}</span> {{Task.status}}
+    </li>
+</ul>
+
+<div>
+    <label for="status">Task status: </label>
+    <input id="status" [(ngModel)]="Task.status" placeholder="status">
+</div>
