@@ -1,5 +1,5 @@
-<h2>My Tasks</h2>
-<ul class="tasks"> <!-- Esta lista recorre la lista de elementos almacenados en el mock-tasks -->
+<!-- <h2>My Tasks</h2>
+<ul class="tasks"> 
     <li *ngFor="let Task of task">
         <button type="button" (click)="onSelect(Task)" [class.selected]="Task === selectedTask">
             <span class="badge">Task: {{Task.id}}</span>
@@ -8,7 +8,7 @@
     </li>
 </ul>
 
-<div *ngIf="selectedTask"> <!-- Este input nos permite cambiar el texto asociado al elemento seleccionado de la lista -->
+<div *ngIf="selectedTask"> 
     <h2>{{selectedTask.status | uppercase}} Details</h2>
     <div>id: {{selectedTask.id}}</div>
 
@@ -16,4 +16,11 @@
         <label for="Task-status">Task status: </label>
         <input id="Task-status" [(ngModel)]="selectedTask.status" placeholder="status">
     </div>
+</div> -->
+
+mi lista
+
+<div *ngFor="let task of tasks">
+        <span class="badge">Task: {{task.id}}</span>
+        <span class="name">{{task.status}}</span>
 </div>

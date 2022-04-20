@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { TasksComponent } from './tasks/tasks.component';
 
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import { TasksService } from './services';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,9 +15,10 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [TasksService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
