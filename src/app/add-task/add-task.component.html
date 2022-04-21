@@ -1,0 +1,20 @@
+<div class="add-task">
+    <button mat-raised-button color="primary" (click)="onClickAddTask()">
+        Add Task
+    </button>
+</div>
+
+<div class="task-add-form">
+
+    <form #addTaskForm="ngForm">
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input class="form-control" id="description" required [(ngModel)]="task.description">
+        </div>
+        <div class="form-group">
+            <label for="status">Status</label>
+            <input class="form-control" id="status" required [(ngModel)]="task.status">
+        </div>
+        <button mat-raised-button color="primary" (click)="submitAddTaskForm()">Create Task</button>
+    </form>
+</div>

@@ -18,9 +18,24 @@
     </div>
 </div> -->
 
-mi lista
+<!--mi lista
 
-<div *ngFor="let task of tasks">
-        <span class="badge">Task: {{task.id}}</span>
-        <span class="name">{{task.status}}</span>
+ <div *ngFor="let task of tasks">
+    <span>Task: {{task.id}}</span>
+    <span>{{task.description}}</span>
+    <span>{{task.status}}</span>
+</div> -->
+
+<div class="tasks">
+    <div class="task-card" *ngFor="let task of tasks">
+        <mat-card>
+            <mat-card-title>
+               ID: {{task.id}}
+            </mat-card-title>
+            <mat-card-content>
+                <p>{{task.description}}</p>
+                <p class="task-status">{{task.status}}</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
 </div>

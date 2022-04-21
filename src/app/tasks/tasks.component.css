@@ -1,4 +1,4 @@
-/* tasksComponent's private CSS styles */
+/* /* tasksComponent's private CSS styles 
 .tasks {
     margin: 0 0 2em 0;
     list-style-type: none;
@@ -63,4 +63,23 @@
   
   .tasks .name {
     align-self: center;
-  }
+  } */
+
+.tasks{
+   width: 100%;
+}  
+
+.task-card{
+    display: inline-grid;
+    width: 200px;
+    margin: 10px;
+    min-height: 200px;
+}
+
+.task-status{
+    border: 1px solid blue;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}

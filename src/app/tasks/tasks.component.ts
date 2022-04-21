@@ -10,7 +10,7 @@ import { TasksService } from '../services';
 })
 export class TasksComponent implements OnInit {
 
-  public tasks:Task[]= []; 
+  public tasks: Task[] = [];
 
   //task = TASKS;
 
@@ -19,10 +19,16 @@ export class TasksComponent implements OnInit {
     this.selectedTask = Task;
   } */
 
-  constructor(private taskService:TasksService) { }
+  constructor(private taskService: TasksService) { }
 
   ngOnInit(): void {
-    this.taskService.listTasks().subscribe((data)=>{
+    this.getTasks();
+  }
+
+  public getTasks() {
+
+    this.taskService.listTasks().subscribe((data) => {
+      console.log(data)
       this.tasks = data;
     })
   }
