@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { TasksComponent } from './tasks/tasks.component';
 
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
-import { TasksService } from './services';
+import { TaskByIdService, TasksService } from './services';
 import { HttpClientModule } from '@angular/common/http';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -31,7 +31,7 @@ import { CommonModule } from '@angular/common';
     FormsModule,
     CommonModule
   ],
-  providers: [TasksService],
+  providers: [TasksService, TaskByIdService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

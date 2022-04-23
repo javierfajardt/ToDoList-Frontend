@@ -30,10 +30,10 @@
     <div class="task-card" *ngFor="let task of tasks">
         <mat-card>
             <mat-card-title>
-               ID: {{task.id}}
+               Tarea {{task.id}}
             </mat-card-title>
-            <mat-card-content>
-                <p>{{task.description}}</p>
+            <mat-card-content class="card-box">
+                <p id="description">{{task.description}}</p>
                 <p class="task-status">{{task.status}}</p>
             </mat-card-content>
         </mat-card>

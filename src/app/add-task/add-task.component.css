@@ -1,9 +1,18 @@
-.add-task{
+.task-panel{
+    float: right;
+    margin-right: 25%;
+}
 
-    margin: 20px, 10px;
+.add-task{
+    margin: 20px 10px;
+    align-self: left;
 }
 
 .task-add-form{
+    margin: 20px 10px;
+    display: block;
+}
 
-    margin: 20px, 10px;
+.task-add-submit-button{
+    margin: 20px 10px;
 }

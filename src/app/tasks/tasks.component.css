@@ -65,21 +65,41 @@
     align-self: center;
   } */
 
-.tasks{
-   width: 100%;
-}  
-
-.task-card{
-    display: inline-grid;
-    width: 200px;
-    margin: 10px;
-    min-height: 200px;
+.tasks {
+  width: 60%;
+  background-color: grey;
+  align-content: left;
+  float: left;
 }
 
-.task-status{
-    border: 1px solid blue;
-    background-color: blue;
-    color: white;
-    border-radius: 5px;
-    padding: 5px;
+.task-card {
+  display: inline-grid;
+  width: 200px;
+  margin: 10px;
+  min-height: 200px;
+}
+
+.task-card:hover {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.task-status {
+  border: 1px solid blue;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 0px;
+}
+
+#description{
+  min-height: 130px;
+}
+
+mat-card {
+  -webkit-box-flex: 1
+}
+
+mat-card-title {
+  text-align: center;
 }

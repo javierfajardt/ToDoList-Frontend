@@ -1,20 +1,32 @@
-<div class="add-task">
-    <button mat-raised-button color="primary" (click)="onClickAddTask()">
-        Add Task
-    </button>
-</div>
+<div class="task-panel">
+    <div class="add-task">
+        <button mat-raised-button color="primary" (click)="onClickAddTask(addNewTaskButton)">
+            Add/Delete Task
+        </button>
+    </div>
 
-<div class="task-add-form">
-
-    <form #addTaskForm="ngForm">
-        <div class="form-group">
-            <label for="description">Description</label>
-            <input class="form-control" id="description" required [(ngModel)]="task.description">
-        </div>
-        <div class="form-group">
-            <label for="status">Status</label>
-            <input class="form-control" id="status" required [(ngModel)]="task.status">
-        </div>
-        <button mat-raised-button color="primary" (click)="submitAddTaskForm()">Create Task</button>
-    </form>
+    <div id="add-task-form-wrapper" class="task-add-form" *ngIf="addNewTaskButton === selectedButton">
+        <form #addTaskForm="ngForm">
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input class="form-control" id="description" name="description" required [(ngModel)]="task.description">
+            </div>
+            <div class="form-group">
+                <label for="status">Status</label>
+                <input class="form-control" id="status" name="status" required [(ngModel)]="task.status">
+            </div>
+            <button class="task-add-submit-button" mat-raised-button color="primary"
+                (click)="submitAddTaskForm()">Create Task</button>
+        </form>       
+    </div>
+    <div id="delete-task-for-wrapper" class="task-delete-form" *ngIf="addNewTaskButton === selectedButton">
+        <form #deleteTaskForm="ngForm">
+            <div class="form-group">
+                <label for="description">ID Tarea</label>
+                <input class="form-control" id="id" name="id" required [(ngModel)]="task.id">
+            </div>
+            <button class="task-add-submit-button" mat-raised-button color="primary"
+                (click)="submitDeleteTaskForm()">Delete Task</button>
+        </form>
+    </div>
 </div>
